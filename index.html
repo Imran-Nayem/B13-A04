@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <i class="fa-solid fa-delete-left"></i>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <!-- <h1 class="text-5xl font-bold text-green-600">Plant Tracker</h1>
+    <p class="text-red-500">welcome my boy</p> -->
+    <header class="w-[80%] mx-auto">
+        <h1 class="text-3xl font-bold text-shadow-black my-5">Job Application Tracker</h1>
+        <div class="grid grid-cols-3 gap-10">
+            <div class="bg-neutral-300 p-4 rounded-2xl"> 
+                <p class="text-lg">Total</p>
+                <p id="totalCount" class="font-bold text-lg text-black 500">8</p>
+            </div>
+            <div class="bg-green-300 p-3 rounded-2xl"> 
+                <p class="text-lg ">Interview</p>
+                <p id="interviewCount" class="text-shadow-lg font-bold text-green-600">0</p>
+            </div>
+            <div class="bg-red-300 p-2 rounded-2xl"> 
+                <p class="text-lg">Rejected</p>
+                <p id="rejectedCount" class="font-bold text-lg text-red-600">0</p>
+             </div>
+        </div>
+    </header>
+
+    <!-- <hr class="my-8"> -->
+    <main class="w-[80%] mx-auto border-2 border-red-500 p-0">
+        
+        
+        <div>
+            <p class="font-bold text-lg mb-5">Available Jobs</p>
+            <button onclick="toggleStyle('all-filter-btn')" class="bg-sky-600 px-4 py-2 text-white"id="all-filter-btn">All</button>
+            <button onclick="toggleStyle('thriving-filter-btn')" class="bg-gray-300 px-4 py-2"id="thriving-filter-btn">Interview</button>
+            <button onclick="toggleStyle('struggling-filter-btn')" class="bg-gray-300 px-4 py-2"id="struggling-filter-btn">Rejected</button>
+        </div>
+        <section id="allCards">
+            
+            <!--card -->
+            <div class="card border-2 mt-6 p-8 flex justify-between">
+                <div class="space-y-6">
+                    <!-- part 1-->
+                    <div>
+                        <h1 class=" font-bold plantName text-xl"> Mobile First Corp</h1>
+                        <p class="latinName">React Native Developer</p>
+                    </div>
+                    <!-- part 2-->
+                     <div class=" flex gap-5 bg-grey-200">
+                        <p class="light bg-gray-200 px-5">Bright indicate</p>
+                        <p class="Water bg-gray-200 px-5">Weekly</p>
+                    </div>
+                    <!-- part 3-->
+                    <p class="status">Not Applicable</p>
+                    <p class="notes">New Leaf Unfurling by the east window</p>
+                    <!-- part 4-->
+                    <div class="flex gap-5">
+                        <button class="thriving-btn  px-2 py-1  border rounded-lg text-green-500">Interview</button>
+                        <button class="struggling-btn px-2 py-1 border rounded-lg text-red-500">Rejected</button>
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="btnDLT bg-red-200 text-red-600 px-2 py-1">DELETE</p>
+                    <i class="fa-solid fa-delete-left">delete</i>
+                </div>
+            </div>
+             <div class="card border-2 mt-6 p-8 flex justify-between">
+                <div class="space-y-6">
+                    <!-- part 1-->
+                    <div>
+                        <h1 class="plantName text-3xl">Plant Name 2</h1>
+                        <p class="latinName">Latin Name</p>
+                    </div>
+                    <!-- part 2-->
+                     <div class=" flex gap-5 bg-grey-200">
+                        <p class="light bg-gray-200 px-5">Bright indicate</p>
+                        <p class="Water bg-gray-200 px-5">Weekly</p>
+                    </div>
+                    <!-- part 3-->
+                    <p class="status">Not Applicable</p>
+                    <p class="notes">New Leaf Unfurling by the east window</p>
+                    <!-- part 4-->
+                    <div class="flex gap-5">
+                        <button class="thriving-btn bg-green-500 px-2 py-1 rounded-2xl text-white">Thriving</button>
+                        <button class="struggling-btn bg-yellow-500 px-2 py-1 rounded-2xl text-white">Struggling</button>
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="btnDLT bg-red-200 text-red-600 px-2 py-1">DELETE</p>
+                </div>
+            </div>
+            <div class="card border-2 mt-6 p-8 flex justify-between">
+                <div class="space-y-6">
+                    <!-- part 1-->
+                    <div>
+                        <h1 class="plantName text-3xl">Plant Name 3</h1>
+                        <p class="latinName">Latin Name</p>
+                    </div>
+                    <!-- part 2-->
+                     <div class=" flex gap-5 bg-grey-200">
+                        <p class="light bg-gray-200 px-5">Bright indicate</p>
+                        <p class="Water bg-gray-200 px-5">Weekly</p>
+                    </div>
+                    <!-- part 3-->
+                    <p class="status">Not Applicable</p>
+                    <p class="notes">New Leaf Unfurling by the east window</p>
+                    <!-- part 4-->
+                    <div class="flex gap-5">
+                        <button class="thriving-btn bg-green-500 px-2 py-1 rounded-2xl text-white">Thriving</button>
+                        <button class="struggling-btn bg-yellow-500 px-2 py-1 rounded-2xl text-white">Struggling</button>
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="btnDLT bg-red-200 text-red-600 px-2 py-1">DELETE</p>
+                </div>
+            </div>
+
+        </section>
+
+        
+        
+        <script src="project js.js"></script>
+    </main>
+
+    
+</body>
+</html>
