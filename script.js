@@ -29,3 +29,39 @@ function toggleStyle(id) {
     });
 
 }
+
+const totalCount = document.getElementById("totalCount");
+const interviewCount = document.getElementById("interviewCount");
+const rejectedCount = document.getElementById("rejectedCount");
+const cards = document.querySelectorAll(".card");
+
+totalCount.innerText = cards.length;
+
+let interview = 0;
+let rejected = 0;
+
+cards.forEach(card => {
+
+const interviewBtn = card.querySelector(".interview-btn");
+const rejectedBtn = card.querySelector(".rejected-btn");
+const statusBtn = card.querySelector(".status");
+const deleteBtn = card.querySelector(".fa-trash-can");
+
+interviewBtn.addEventListener("click", function () {
+
+    if (statusBtn.innerText !== "Interview"){
+
+    if (statusBtn.innerText === "Rejected") {
+            rejected--;
+            rejectedCount.innerText = rejected;
+       }
+
+        statusBtn.innerText = "Interview";
+        statusBtn.className = "status bg-green-500 text-white px-2 py-1 rounded-lg";
+
+        interview++;
+        interviewCount.innerText = interview;
+
+    }
+});
+
