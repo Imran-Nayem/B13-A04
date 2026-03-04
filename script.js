@@ -27,6 +27,7 @@ function toggleStyle(id) {
         card.style.display = (status ==="Rejected") ? "flex" : "none";
        }
     });
+    checkEmpty();
 
 }
 
@@ -39,6 +40,35 @@ totalCount.innerText = cards.length;
 
 let interview = 0;
 let rejected = 0;
+
+function checkEmpty() {
+
+    const cards = document.querySelectorAll(".card");
+    let visible = 0;
+
+    cards.forEach(card => {
+        if (card.style.display !== "none") {
+            visible++;
+        }
+    });
+
+    const empty = document.getElementById("emptyState");
+
+    if (visible === 0) {
+        empty.classList.remove("hidden");
+    } else {
+        empty.classList.add("hidden");
+    }
+}
+
+function updateTotal() {
+    totalCount.innerText = document.querySelectorAll(".card").length;
+  }
+updateTotal();
+
+
+
+const card = document.querySelectorAll(".card");
 
 cards.forEach(card => {
 
@@ -64,6 +94,7 @@ interviewBtn.addEventListener("click", function () {
 
     }
 });
+
 rejectedBtn.addEventListener("click", function () {
 
     if (statusBtn.innerText !== "Rejected") 
@@ -96,6 +127,8 @@ rejectedBtn.addEventListener("click", function () {
         }
 
     card.remove();
+    updateTotal();
+    checkEmpty();
 
     totalCount.innerText = document.querySelectorAll(".card").length;
 
