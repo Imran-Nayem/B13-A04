@@ -64,4 +64,41 @@ interviewBtn.addEventListener("click", function () {
 
     }
 });
+rejectedBtn.addEventListener("click", function () {
 
+    if (statusBtn.innerText !== "Rejected") 
+        {
+        if (statusBtn.innerText === "Interview") {
+            interview--;
+             interviewCount.innerText = interview;
+        }
+
+        statusBtn.innerText = "Rejected";
+        statusBtn.className = "status bg-red-500 text-white px-2 py-1 rounded-lg";
+
+        rejected++;
+        rejectedCount.innerText = rejected;
+    }
+
+ });
+
+ deleteBtn.addEventListener("click", function() {
+
+    if (statusBtn.innerText === "Interview") {
+        interview--;
+        interviewCount.innerText = interview;
+    }
+
+    if (statusBtn.innerText === "Rejected") 
+        {
+            rejected--;
+            rejectedCount.innerText = rejected;
+        }
+
+    card.remove();
+
+    totalCount.innerText = document.querySelectorAll(".card").length;
+
+    });
+
+});
